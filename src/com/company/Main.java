@@ -31,12 +31,22 @@ public class Main {
             for(int j = 0; j < contact.get(i).size(); j++) {
                 System.out.print(contact.get(i).get(j) + " ");
             }
+                System.out.println("Contact Addes Sucessful");
+
     }
+    public void addcontacts() {
+        System.out.println( "add to create another contact");
+        String condition =  scan.next();
+        if (condition.equals("Y")) {
+            Contacts();
+        }
+    }
+
     public static void main(String[] args) {
         System.out.println("Welcome to Address Book Program");
         Main obj = new Main();
         obj.Contacts();
-        
+        obj.addcontacts();
     }
 
 
