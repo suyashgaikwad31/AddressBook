@@ -6,6 +6,8 @@ import java.util.Scanner;
 public class Main {
     ArrayList<ArrayList<String>> contact = new ArrayList<ArrayList<String>>();
     Scanner scan = new Scanner(System.in);
+    public ArrayList<ArrayList> books = new ArrayList<>();
+
     public void Contacts() {
         ArrayList<String> addNew = new ArrayList<String>();
         System.out.println("Enter the First Name: ");
@@ -83,13 +85,15 @@ public class Main {
         }
     }
 
-
-
-
-
-    public void choiceCondition() {
+    public void addBooks() {
+        System.out.println( + books.size());
+        System.out.print("Enter the Address Books Name: ");
+        String.format(scan.next(), choiceCondition());
+    }
+    
+    public ArrayList choiceCondition() {
         System.out.println( + contact.size());
-        System.out.println("Select condition \n 1) Add New Contact\n 2) Edit Existing Contact\n 3)Delete Contact\n 4)Contact Show\n ");
+        System.out.println("Select condition \n 1) Add New Contact\n 2) Edit Existing Contact\n 3)Delete Contact\n 4)Contact Show\n 5) AddBooks\n ");
         int choice = scan.nextInt();
         switch (choice) {
             case 1:
@@ -104,13 +108,15 @@ public class Main {
             case 4:
                 contactShow();
                 break;
+            case 5:
+                addBooks();
+                break;
             default:
                 System.out.println("Enter the number");
                 choiceCondition();
         }
+        return null;
     }
-
-
 
     public static void main(String[] args) {
         System.out.println("Welcome to Address Book Program");
