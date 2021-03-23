@@ -67,10 +67,22 @@ public class Main {
             }
         }
     }
+    public void contactDelete() {
+        System.out.print("Enter the First Name ");
+        String name = scan.next();
+        for(int i = 0; i < contact.size(); i++) {
+            if(contact.get(i).contains(name)) {
+                contact.remove(i);
+                System.out.println("Delete Contact " + contact.size());
+                break;
+            }
+        }
+    }
+
 
     public void choiceCondition() {
         System.out.println( + contact.size());
-        System.out.println("Select condition \n 1) Add New Contact\n 2) Edit Existing Contact\n ");
+        System.out.println("Select condition \n 1) Add New Contact\n 2) Edit Existing Contact\n 3)Delete Contact\n ");
         int choice = scan.nextInt();
         switch (choice) {
             case 1:
@@ -78,6 +90,9 @@ public class Main {
                 break;
             case 2:
                 editContact();
+                break;
+            case 3:
+                contactDelete();
                 break;
             default:
                 System.out.println("Enter the number");
