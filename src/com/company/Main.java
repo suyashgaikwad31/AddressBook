@@ -27,11 +27,6 @@ public class Main {
         contact.add(addNew);
 
         System.out.println("contact added");
-        for(int i = 0; i < contact.size(); i++)
-            for(int j = 0; j < contact.get(i).size(); j++) {
-                System.out.print(contact.get(i).get(j) + " ");
-            }
-                System.out.println("Contact Addes Sucessful");
 
     }
     public void addcontacts() {
@@ -79,10 +74,22 @@ public class Main {
         }
     }
 
+    public void contactShow() {
+        for(int i = 0; i < contact.size(); i++) {
+            for (int j = 0; j < contact.get(i).size(); j++) {
+                System.out.print(contact.get(i).get(j) + " ");
+            }
+            System.out.println("Contact Added");
+        }
+    }
+
+
+
+
 
     public void choiceCondition() {
         System.out.println( + contact.size());
-        System.out.println("Select condition \n 1) Add New Contact\n 2) Edit Existing Contact\n 3)Delete Contact\n ");
+        System.out.println("Select condition \n 1) Add New Contact\n 2) Edit Existing Contact\n 3)Delete Contact\n 4)Contact Show\n ");
         int choice = scan.nextInt();
         switch (choice) {
             case 1:
@@ -93,6 +100,9 @@ public class Main {
                 break;
             case 3:
                 contactDelete();
+                break;
+            case 4:
+                contactShow();
                 break;
             default:
                 System.out.println("Enter the number");
