@@ -1,6 +1,8 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class Main {
@@ -8,6 +10,7 @@ public class Main {
     ArrayList<ArrayList<String>> contact = new ArrayList<ArrayList<String>>();
     Scanner scan = new Scanner(System.in);
     public ArrayList<ArrayList> books = new ArrayList<>();
+    private Arrays Contacts;
 
     public void Contacts() {
         ArrayList<String> addNew = new ArrayList<String>();
@@ -96,7 +99,7 @@ public class Main {
 
     public ArrayList choiceCondition() {
         System.out.println(+contact.size());
-        System.out.println("Select condition \n 1) Add New Contact\n 2) Edit Existing Contact\n 3)Delete Contact\n 4)Contact Show\n 5) AddBooks\n ");
+        System.out.println("Select condition \n 1) Add New Contact\n 2) Edit Existing Contact\n 3)Delete Contact\n 4)Contact Show\n 5) AddBooks\n 6) searchByCity\n 7)searchByState\n");
         int choice = scan.nextInt();
         switch (choice) {
             case 1:
@@ -114,6 +117,12 @@ public class Main {
             case 5:
                 addBooks();
                 break;
+            case 6:
+                searchByCity();
+                break;
+            case 7:
+                searchByState();
+                break;
             default:
                 System.out.println("Enter the number");
                 choiceCondition();
@@ -127,6 +136,26 @@ public class Main {
         Main obj = new Main();
         obj.choiceCondition();
         obj.duplicateadress();
+        obj.searchByCity();
+        obj.searchByState();
+
+    }
+
+    private void searchByState() {
+        System.out.println("Enter the State Name");
+        String state = scan.nextLine();
+        System.out.println("serch by: " +state);
+        if (equals(state))
+            System.out.println(Contacts.equals(state));
+
+    }
+
+    private void searchByCity() {
+        System.out.println("Enter the city Name");
+        String city = scan.nextLine();
+        System.out.println("serch by: " +city);
+        if (equals(city))
+            System.out.println(Contacts.equals(city));
 
     }
 
@@ -142,6 +171,8 @@ public class Main {
             }
         }
     }
+
+
 }
 
 
