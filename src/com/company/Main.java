@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
+
     ArrayList<ArrayList<String>> contact = new ArrayList<ArrayList<String>>();
     Scanner scan = new Scanner(System.in);
     public ArrayList<ArrayList> books = new ArrayList<>();
@@ -31,9 +32,10 @@ public class Main {
         System.out.println("contact added");
 
     }
+
     public void addcontacts() {
-        System.out.println( "add to create another contact");
-        String condition =  scan.next();
+        System.out.println("add to create another contact");
+        String condition = scan.next();
         if (condition.equals("Y")) {
             Contacts();
         } else {
@@ -44,14 +46,14 @@ public class Main {
     public void editContact() {
         System.out.print("Edit First Name: ");
         String name = scan.next();
-        for(int i = 0; i < contact.size(); i++){
-            if(contact.get(i).contains(name)) {
+        for (int i = 0; i < contact.size(); i++) {
+            if (contact.get(i).contains(name)) {
                 System.out.println("Edit First Name ");
-                for(int j = 0; j < contact.get(i).size(); j++) {
+                for (int j = 0; j < contact.get(i).size(); j++) {
                     System.out.println(j + " " + contact.get(i).get(j));
                 }
                 System.out.println("Edit Last Name");
-                for(int j = 0; j < contact.get(i).size(); j++) {
+                for (int j = 0; j < contact.get(i).size(); j++) {
                     System.out.println(j + " " + contact.get(i).get(j));
                 }
                 System.out.print("Enter the Number whic do you Want edit ");
@@ -64,11 +66,12 @@ public class Main {
             }
         }
     }
+
     public void contactDelete() {
         System.out.print("Enter the First Name ");
         String name = scan.next();
-        for(int i = 0; i < contact.size(); i++) {
-            if(contact.get(i).contains(name)) {
+        for (int i = 0; i < contact.size(); i++) {
+            if (contact.get(i).contains(name)) {
                 contact.remove(i);
                 System.out.println("Delete Contact " + contact.size());
                 break;
@@ -77,7 +80,7 @@ public class Main {
     }
 
     public void contactShow() {
-        for(int i = 0; i < contact.size(); i++) {
+        for (int i = 0; i < contact.size(); i++) {
             for (int j = 0; j < contact.get(i).size(); j++) {
                 System.out.print(contact.get(i).get(j) + " ");
             }
@@ -86,13 +89,13 @@ public class Main {
     }
 
     public void addBooks() {
-        System.out.println( + books.size());
+        System.out.println(+books.size());
         System.out.print("Enter the Address Books Name: ");
         String.format(scan.next(), choiceCondition());
     }
-    
+
     public ArrayList choiceCondition() {
-        System.out.println( + contact.size());
+        System.out.println(+contact.size());
         System.out.println("Select condition \n 1) Add New Contact\n 2) Edit Existing Contact\n 3)Delete Contact\n 4)Contact Show\n 5) AddBooks\n ");
         int choice = scan.nextInt();
         switch (choice) {
@@ -118,12 +121,28 @@ public class Main {
         return null;
     }
 
+
     public static void main(String[] args) {
         System.out.println("Welcome to Address Book Program");
         Main obj = new Main();
         obj.choiceCondition();
+        obj.duplicateadress();
+
     }
 
-
-
+    private void duplicateadress() {
+        for (int k = 0; k < contact.get(k).size(); k++) {
+            String book = (contact.get(k).get(k) + " ");
+            String first = new String();
+            if (first.equals(book)) {
+                System.out.println("already preent");
+            } else {
+                System.out.println("add contact");
+                break;
+            }
+        }
+    }
 }
+
+
+
