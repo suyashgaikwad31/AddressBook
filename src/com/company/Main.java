@@ -59,7 +59,7 @@ public class Main {
                 for (int j = 0; j < contact.get(i).size(); j++) {
                     System.out.println(j + " " + contact.get(i).get(j));
                 }
-                System.out.print("Enter the Number whic do you Want edit ");
+                System.out.print("Enter the Number which do you Want edit ");
                 int info = scan.nextInt();
                 System.out.print("Enter the new data ");
                 String newInfo = scan.next();
@@ -147,6 +147,7 @@ public class Main {
         System.out.println("serch by: " +state);
         if (equals(state))
             System.out.println(Contacts.equals(state));
+        System.out.println("state: " +contact +state);
 
     }
 
@@ -156,6 +157,7 @@ public class Main {
         System.out.println("serch by: " +city);
         if (equals(city))
             System.out.println(Contacts.equals(city));
+        System.out.println("city: " +contact +city);
 
     }
 
