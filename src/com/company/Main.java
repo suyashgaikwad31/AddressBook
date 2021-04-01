@@ -118,10 +118,28 @@ public class Main {
         if (equals(firstname)) ;
         System.out.println("FistName" + firstname);
     }
+    public void sortByCityName() {
+        System.out.println("Sorted by city Names");
+        String city = scan.nextLine();
+        if (equals(city)) ;
+        System.out.println("CityName" + city);
+    }
+    public void sortByStateName() {
+        System.out.println("Sorted by State Names");
+        String state = scan.nextLine();
+        if (equals(state)) ;
+        System.out.println("StateName" + state);
+    }
+    public void sortByZipcode() {
+        System.out.println("Sorted by zip");
+        String zip = scan.nextLine();
+        if (equals(zip)) ;
+        System.out.println("zip" + zip);
+    }
 
     public ArrayList choiceCondition() {
         System.out.println(+contact.size());
-        System.out.println("Select condition \n 1) Add New Contact\n 2) Edit Existing Contact\n 3)Delete Contact\n 4)Contact Show\n 5) AddBooks\n 6) serachbycity\n 7)serachbystate\n 8)sort By Name\n ");
+        System.out.println("Select condition \n 1) Add New Contact\n 2) Edit Existing Contact\n 3)Delete Contact\n 4)Contact Show\n 5) AddBooks\n 6) serachbycity\n 7)serachbystate\n 8)sort By Name\n 9)sort by Zip\n 10)sort by State\n 11) sort By City\n ");
         int choice = scan.nextInt();
         switch (choice) {
             case 1:
@@ -148,6 +166,15 @@ public class Main {
             case 8:
                 sortByName();
                 break;
+            case 9:
+                sortByZipcode();
+                break;
+            case 10:
+                sortByStateName();
+                break;
+            case 11:
+                sortByCityName();
+                break;
             default:
                 System.out.println("Enter the number");
                 choiceCondition();
@@ -163,6 +190,9 @@ public class Main {
         obj.searchByState();
         obj.searchByCity();
         obj.sortByName();
+        obj.sortByCityName();
+        obj.sortByStateName();
+        obj.sortByZipcode();
 
     }
 
