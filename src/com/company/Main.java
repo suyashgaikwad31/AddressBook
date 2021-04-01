@@ -126,22 +126,10 @@ public class Main {
         System.out.println("Welcome to Address Book Program");
         Main obj = new Main();
         obj.choiceCondition();
-        obj.duplicateadress();
 
     }
 
-    private void duplicateadress() {
-        for (int k = 0; k < contact.get(k).size(); k++) {
-            String book = (contact.get(k).get(k) + " ");
-            String first = new String();
-            if (first.equals(book)) {
-                System.out.println("already preent");
-            } else {
-                System.out.println("add contact");
-                break;
-            }
-        }
-    }
+
 }
 
 
