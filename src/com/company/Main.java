@@ -99,6 +99,8 @@ public class Main {
         System.out.println("Please Enter the Name of the State you want to search by.");
         String stateName = scan.nextLine();
             System.out.println("StateName " +stateName);
+        String count = "";
+        System.out.println("Count in "+stateName+" is "+count);
 
     }
 
@@ -106,6 +108,8 @@ public class Main {
         System.out.println("Please Enter the City Name you want to search by.");
         String cityName = scan.nextLine();
             System.out.println("cityName " + cityName);
+        String count = "";
+        System.out.println("Count in "+cityName+" is "+count);
         }
 
 
