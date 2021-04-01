@@ -112,10 +112,16 @@ public class Main {
         System.out.println("Count in "+cityName+" is "+count);
         }
 
+    public void sortByName() {
+        System.out.println("Sorted by First Names");
+        String firstname = scan.nextLine();
+        if (equals(firstname)) ;
+        System.out.println("FistName" + firstname);
+    }
 
     public ArrayList choiceCondition() {
         System.out.println(+contact.size());
-        System.out.println("Select condition \n 1) Add New Contact\n 2) Edit Existing Contact\n 3)Delete Contact\n 4)Contact Show\n 5) AddBooks\n 6) serachbycity\n 7)serachbystate\n ");
+        System.out.println("Select condition \n 1) Add New Contact\n 2) Edit Existing Contact\n 3)Delete Contact\n 4)Contact Show\n 5) AddBooks\n 6) serachbycity\n 7)serachbystate\n 8)sort By Name\n ");
         int choice = scan.nextInt();
         switch (choice) {
             case 1:
@@ -139,6 +145,9 @@ public class Main {
             case 7:
                 searchByState();
                 break;
+            case 8:
+                sortByName();
+                break;
             default:
                 System.out.println("Enter the number");
                 choiceCondition();
@@ -153,6 +162,7 @@ public class Main {
         obj.choiceCondition();
         obj.searchByState();
         obj.searchByCity();
+        obj.sortByName();
 
     }
 
